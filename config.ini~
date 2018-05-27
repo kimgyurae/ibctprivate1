@@ -5,7 +5,7 @@
 
     http-server-address = 0.0.0.0:8888
     p2p-listen-endpoint = 0.0.0.0:9876
-    p2p-server-address = 211.222.107.234:9876
+    p2p-server-address = !!!NODE_IP_ADDRESS!!!!:9876
     access-control-allow-origin = *
 
 
@@ -50,6 +50,11 @@
     plugin = eosio::producer_plugin
     private-key = ["!!!YOUR_PUB_KEY!!!","!!!YOUR_PRIV_KEY!!!"]
     producer-name = !!_YOUR_PRODUCER_NAME_!!!
- 
- 
- 
+
+
+
+#EXAMPLE peers please chek last one on http://dev.cryptolions.io/#p2p
+p2p-peer-address = dev.cryptolions.io:19876
+p2p-peer-address = dev.cryptolions.io:29876
+p2p-peer-address = dev.cryptolions.io:39876
+

@@ -1,0 +1,14 @@
+Private NET
+
+Wallet Password
+1. Prime node - workstation 
+PW5JJnnUgfuLgLLsaKQsqJNWVWMjkyjHdVHEaHbP5ovcJJuE3tdxT
+
+2.  Node1 - key
+Private key: 
+5KZ77sMTNtkf7g4GrhsqE42rJizXoxYTMP4CYM5LAmdR1oBqoGu
+Public key: 
+EOS5nFihZRLtaFLobXgZpSLVq7FatLQ5eGacSmd3j1scYWuqv3Kdu
+
+3. register nodes
+./cleos.sh push action eosio setprods "{ \"schedule\": [{\"producer_name\": \"node1\",\"block_signing_key\": \"EOS5nFihZRLtaFLobXgZpSLVq7FatLQ5eGacSmd3j1scYWuqv3Kdu\"}]}" -p eosio@active
