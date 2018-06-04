@@ -2,13 +2,84 @@ Private NET
 
 Wallet Password
 1. Prime node - workstation 
-PW5JJnnUgfuLgLLsaKQsqJNWVWMjkyjHdVHEaHbP5ovcJJuE3tdxT
+PW5HuGNotX3KM4YQpp2pCDzmce8HTVK8vsEXNw1Kvz2oLXskVXnfF
 
-2.  Node1 - key
+genesis json
+Private key: 5KX9iLDRus4jevcBRPArmPRrkQFD9MBtTEdjAxnYMR5a9wcs46W
+Public key: EOS5kiTBoD38FxXTmcPzJS3EjtcusKE2WkEfjGEPFTnnth21hQMHa
+
+
+2.  eosio - key
 Private key: 
-5KZ77sMTNtkf7g4GrhsqE42rJizXoxYTMP4CYM5LAmdR1oBqoGu
+5JvAsVfN7GwQdVtgQLSCFpQzkEWmXAvCK84VSSJMQdoj5pVm8rz
 Public key: 
-EOS5nFihZRLtaFLobXgZpSLVq7FatLQ5eGacSmd3j1scYWuqv3Kdu
+EOS88hPxyCmjxyBqH6z1DpqPVpuyXimUkoJXBW1Gnkazn8d7EyCVc
+
+
+./cleos.sh create account eosio eosio.bpay EOS88hPxyCmjxyBqH6z1DpqPVpuyXimUkoJXBW1Gnkazn8d7EyCVc 
+./cleos.sh create account eosio eosio.msig EOS88hPxyCmjxyBqH6z1DpqPVpuyXimUkoJXBW1Gnkazn8d7EyCVc 
+./cleos.sh create account eosio eosio.names EOS88hPxyCmjxyBqH6z1DpqPVpuyXimUkoJXBW1Gnkazn8d7EyCVc 
+./cleos.sh create account eosio eosio.ram EOS88hPxyCmjxyBqH6z1DpqPVpuyXimUkoJXBW1Gnkazn8d7EyCVc 
+./cleos.sh create account eosio eosio.ramfee EOS88hPxyCmjxyBqH6z1DpqPVpuyXimUkoJXBW1Gnkazn8d7EyCVc 
+./cleos.sh create account eosio eosio.saving EOS88hPxyCmjxyBqH6z1DpqPVpuyXimUkoJXBW1Gnkazn8d7EyCVc 
+./cleos.sh create account eosio eosio.stake EOS88hPxyCmjxyBqH6z1DpqPVpuyXimUkoJXBW1Gnkazn8d7EyCVc 
+./cleos.sh create account eosio eosio.token EOS88hPxyCmjxyBqH6z1DpqPVpuyXimUkoJXBW1Gnkazn8d7EyCVc 
+./cleos.sh create account eosio eosio.vpay EOS88hPxyCmjxyBqH6z1DpqPVpuyXimUkoJXBW1Gnkazn8d7EyCVc 
+
+./cleos.sh set contract eosio.token /home/eos/priv/eos/build/contracts/eosio.token
+./cleos.sh set contract eosio.msig /home/eos/priv/eos/build/contracts/eosio.msig
+./cleos.sh push action eosio.token create '[ "eosio", "10000000000.0000 EOS" ]' -p eosio.token
+./cleos.sh push action eosio.token issue '[ "eosio", "1000000000.0000 EOS", "memo" ]' -p eosio
+./cleos.sh set contract eosio /home/eos/priv/eos/build/contracts/eosio.system
+./cleos.sh push action eosio setpriv '["eosio.msig", 1]' -p eosio@active
+
+
 
 3. register nodes
-./cleos.sh push action eosio setprods "{ \"schedule\": [{\"producer_name\": \"node1\",\"block_signing_key\": \"EOS5nFihZRLtaFLobXgZpSLVq7FatLQ5eGacSmd3j1scYWuqv3Kdu\"}]}" -p eosio@active
+
+accountnum11
+Private key: 5JNfpn5o7JYT4jXL2Ni9LXsngYRRpEdJ7WKBkYPETTSBeigc8U4
+Public key: EOS5sXjgntjaGNge3EtpZUCHLU73hKSfywBCbjnF3Wj18cVnosqgF
+PW5JK1mRooCuPbDvrkNQurofoHkncH6TxvAhqsd8t3VF9e1epgfNv
+
+accountnum12
+Private key: 5JML8qYaZcboVu4iFN4B52eUPXtAboL3aU5jz4tbxdJ5xmquF1q
+Public key: EOS5CPXCXendCeR7SZQ4ptXhR6uA9UppS5UMxVk6kRAj6G6TfcztD
+
+accountnum13
+Private key: 5K3trmzZs28VJ2FWMJ3SMmKNPFkhB21Q1cGHsfHEy6hjs5U6Qx3
+Public key: EOS5fEh6n5MDb7HpU6csh3UyVGSRBZoxvsHyZ7SijqitmjTEHmXLQ
+
+accountnum14
+Private key: 5KAtpWPAWa3ny8EJULqDxvhRh5pYmVi5tgfqh4MPwShNsoyjATN
+Public key: EOS8CWVUit42QDt9dUbhjTdJiyUWgqTGVtUc6MDVRsRBKFLBSSUVu
+
+./cleos.sh wallet import 5JNfpn5o7JYT4jXL2Ni9LXsngYRRpEdJ7WKBkYPETTSBeigc8U4
+./cleos.sh wallet import 5JML8qYaZcboVu4iFN4B52eUPXtAboL3aU5jz4tbxdJ5xmquF1q
+./cleos.sh wallet import 5K3trmzZs28VJ2FWMJ3SMmKNPFkhB21Q1cGHsfHEy6hjs5U6Qx3
+./cleos.sh wallet import 5KAtpWPAWa3ny8EJULqDxvhRh5pYmVi5tgfqh4MPwShNsoyjATN
+
+./cleos.sh system newaccount eosio --transfer accountnum11 EOS5sXjgntjaGNge3EtpZUCHLU73hKSfywBCbjnF3Wj18cVnosqgF --stake-net "100000000.0000 EOS" --stake-cpu "100000000.0000 EOS" --buy-ram-kbytes 10240
+./cleos.sh system newaccount eosio --transfer accountnum12 EOS5CPXCXendCeR7SZQ4ptXhR6uA9UppS5UMxVk6kRAj6G6TfcztD --stake-net "100000000.0000 EOS" --stake-cpu "100000000.0000 EOS" --buy-ram-kbytes 10240
+./cleos.sh system newaccount eosio --transfer accountnum13 EOS5fEh6n5MDb7HpU6csh3UyVGSRBZoxvsHyZ7SijqitmjTEHmXLQ --stake-net "100000000.0000 EOS" --stake-cpu "100000000.0000 EOS" --buy-ram-kbytes 10240
+./cleos.sh system newaccount eosio --transfer accountnum14 EOS8CWVUit42QDt9dUbhjTdJiyUWgqTGVtUc6MDVRsRBKFLBSSUVu --stake-net "100000000.0000 EOS" --stake-cpu "100000000.0000 EOS" --buy-ram-kbytes 10240
+
+./cleos.sh system regproducer accountnum11 EOS5sXjgntjaGNge3EtpZUCHLU73hKSfywBCbjnF3Wj18cVnosqgF https://ibct.com/
+./cleos.sh system regproducer accountnum12 EOS5CPXCXendCeR7SZQ4ptXhR6uA9UppS5UMxVk6kRAj6G6TfcztD https://ibct.com/
+./cleos.sh system regproducer accountnum13 EOS5fEh6n5MDb7HpU6csh3UyVGSRBZoxvsHyZ7SijqitmjTEHmXLQ https://ibct.com/
+./cleos.sh system regproducer accountnum14 EOS8CWVUit42QDt9dUbhjTdJiyUWgqTGVtUc6MDVRsRBKFLBSSUVu https://ibct.com/
+
+
+nodeos --genesis-json ~/eosio_test/accountnum11/genesis.json --block-log-dir ~/eosio_test/accountnum11/blocks --config-dir ~/eosio_test/accountnum11/ --data-dir ~/eosio_test/accountnum11/ --http-server-address 127.0.0.1:8011 --p2p-listen-endpoint 127.0.0.1:9011 --enable-stale-production --producer-name accountnum11 --private-key '[ "EOS8mUftJXepGzdQ2TaCduNuSPAfXJHf22uex4u41ab1EVv9EAhWt","5K7EYY3j1YY14TSFVfqgtbWbrw3FA8BUUnSyFGgwHi8Uy61wU1o" ]' --plugin eosio::producer_plugin --plugin eosio::chain_api_plugin --plugin eosio::http_plugin --plugin eosio::history_api_plugin --p2p-peer-address localhost:9876 > $DATADIR/stdout.txt 2> $DATADIR/stderr.txt & echo $! > $DATADIR/nodeos.pid
+
+vote
+./cleos.sh system voteproducer prods accountnum11 accountnum11 accountnum12 accountnum13 accountnum14
+./cleos.sh system voteproducer prods accountnum12 accountnum11 accountnum12 accountnum13 accountnum14
+./cleos.sh system voteproducer prods accountnum13 accountnum11 accountnum12 accountnum13 accountnum14
+./cleos.sh system voteproducer prods accountnum14 accountnum11 accountnum12 accountnum13 accountnum14
+
+5. Separate node(EC2 instance)
+Private key: 5KSkN3xWZz6MbFvsRduZGoqWepPKvwtcmJAPYUvWb5cBZth39WM
+Public key: EOS7FpLHQNbbXpEEukU5HK8aTLYfEU4u7biNdk9Yt3yiss5ENSTxe
+
+./cleos.sh system newaccount eosio --transfer flyingtarzan EOS7FpLHQNbbXpEEukU5HK8aTLYfEU4u7biNdk9Yt3yiss5ENSTxe --stake-net "10000000.0000 EOS" --stake-cpu "10000000.0000 EOS" --buy-ram-kbytes 10240
