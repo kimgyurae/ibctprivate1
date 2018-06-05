@@ -78,8 +78,11 @@ vote
 ./cleos.sh system voteproducer prods accountnum13 accountnum11 accountnum12 accountnum13 accountnum14
 ./cleos.sh system voteproducer prods accountnum14 accountnum11 accountnum12 accountnum13 accountnum14
 
-5. Separate node(EC2 instance)
+5. Separate node(EC2 instance ibct02)
 Private key: 5KSkN3xWZz6MbFvsRduZGoqWepPKvwtcmJAPYUvWb5cBZth39WM
 Public key: EOS7FpLHQNbbXpEEukU5HK8aTLYfEU4u7biNdk9Yt3yiss5ENSTxe
+PW5K3ySsQcmwedrx5zR9jmrGuQNc4EEnLRkqWzjBxNZ6D6aeYbXk5
 
-./cleos.sh system newaccount eosio --transfer flyingtarzan EOS7FpLHQNbbXpEEukU5HK8aTLYfEU4u7biNdk9Yt3yiss5ENSTxe --stake-net "10000000.0000 EOS" --stake-cpu "10000000.0000 EOS" --buy-ram-kbytes 10240
+./cleos.sh system regproducer flyingtarzan EOS7FpLHQNbbXpEEukU5HK8aTLYfEU4u7biNdk9Yt3yiss5ENSTxe https://ibct.com/
+
+./cleos.sh system voteproducer prods flyingtarzan flyingtarzan accountnum11
