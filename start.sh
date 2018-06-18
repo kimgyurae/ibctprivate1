@@ -1,14 +1,14 @@
 #!/bin/bash
 ################################################################################
 #
-# Scrip Created by http://CryptoLions.io
-# https://github.com/CryptoLions/EOS-Jungle-Testnet
+# Script for IBCT private_net
+# https://github.com/junep89/ibctprivate
 #
 ###############################################################################
 
 
-NODEOSBINDIR="/home/eos-dawn-v4.2.0/eos/build/programs/nodeos"
-DATADIR="/opt/JungleTestnet"
+NODEOSBINDIR="/home/eos/eos/build/programs/nodeos"
+DATADIR="/home/eos/ibctprivate"
 
 $DATADIR/stop.sh
 echo -e "Starting Nodeos \n";

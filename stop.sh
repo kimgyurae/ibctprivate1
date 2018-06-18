@@ -1,12 +1,12 @@
 #!/bin/bash
 ################################################################################
 #
-# Scrip Created by http://CryptoLions.io
-# https://github.com/CryptoLions/EOS-Jungle-Testnet
+# Script for IBCT private_net
+# https://github.com/junep89/ibctprivate
 #
 ###############################################################################
 
-DIR="/opt/JungleTestnet"
+DIR="/home/eos/ibctprivate"
 
 
     if [ -f $DIR"/nodeos.pid" ]; then
