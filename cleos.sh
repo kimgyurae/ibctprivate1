@@ -1,10 +1,10 @@
-#!/bin/bash
-################################################################################
-#
-# Script for IBCT private_net
-# https://github.com/junep89/ibctprivate
-#
-###############################################################################
+#!/bin/bash                                                                                                                                                                                                                                 
+################################################################################                                                                                                                                                            
+#                                                                                                                                                                                                                                           
+# Script for IBCT private_net                                                                                                                                                                                                               
+# https://github.com/junep89/ibctprivate                                                                                                                                                                                                    
+#                                                                                                                                                                                                                                           
+###############################################################################                                                                                                                                                             
 
 NODEOSBINDIR="/home/eos/eos/build/programs"
 
@@ -16,3 +16,6 @@ WALLETPORT="3000"
 
 
 $NODEOSBINDIR/cleos/cleos -u http://$NODEHOST:$NODEPORT --wallet-url http://$WALLETHOST:$WALLETPORT "$@"
+
+
+
