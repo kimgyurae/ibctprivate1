@@ -23,5 +23,5 @@ DIR="/opt/JungleTestnet/Wallet"
         done
         echo -ne "\rWallet stopped. \n"
 
-    fi
+    fi 
 
